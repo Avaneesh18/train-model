@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene background = "color:white">
+            <a-assets> 
+                <a-asset-item id="train" src="./objects/simple_train.glb"> </a-asset-item>
+            </a-assets>
+            
+            <a-circle id = "floor" position = "-0.4 -0.76 -25" rotation = "-90 0 0" radius = "100" shadow = "receive:true" visible = "true" color="yellow"></a-circle>
+            <a-entity>
+                <a-box src = "desert.jpg" position = "0.076 -4 -39" width = "50" height = "50" ></a-box>
+                <a-box src = "desert.jpg" position = "25.5 -2.9 -15" width = "50" height = "50" rotation = "0 -90 0" ></a-box>
+                <a-box src = "desert.jpg" position = "-25.9 -3.4 -15" width = "50" height = "50" rotation = "0 -90 0"></a-box>
+                <a-box src = "desert.jpg" position = "0 21.4 -15" width = "50" height = "50" rotation = "90 0 0" ></a-box>
+            </a-entity>
+
+            <!--<a-entity obj-model="#train" position="0 0 0" rotation="-90 -40 0" scale="0.1 0.1 0.1 " ></a-entity>--> 
+            <!--<a-entity obj-model="obj-mtl: #side-mtl" position="-10 0 -10" rotation="-90 45 0" scale="0.1 0.1 0.1 " ></a-entity>-->
+
+            <a-entity scale="0.05 0.05 0.05" gltf-model="objects/simple_train.glb" position="0 0 0"  rotaton = "90 0 0"shadow="cast:true;"></a-entity>
+
+        </a-scene>
+    </body>
+</html>
